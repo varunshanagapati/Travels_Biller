@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>VarunTravels</title>
+        <style>
+            #Name{
+                text-transform: uppercase;
+                height: 30px;
+                font-size: 13px;
+            }
+            #From{
+                text-transform: uppercase;
+                height: 30px;
+                font-size: 13px;
+            }
+            #Dest{
+                text-transform: uppercase;
+                height: 30px;
+                font-size: 13px;
+            }
+            #veh{
+                text-transform: uppercase;
+                height: 30px;
+                font-size: 13px;
+            }
+            
+            #title{
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            #adrs{
+                text-align: center;
+            }
+            #sp{
+                font-size: 16px;
+                height: 1px;
+                
+            }
+            .box{
+                padding: 0px;
+                margin: 0px;
+                
+            }
+            .lnk{
+                text-align: right;
+            }
+            #prnt{
+                border-radius: 7px;
+                font-size: 4mm;
+                width: 150px;
+                font-weight: 600;
+                padding: 7px;
+                text-transform: uppercase;
+                
+
+            }
+            #reset{
+                border-radius: 7px;
+                font-size: 4mm;
+                width: 150px;
+                font-weight: 600;
+                padding: 7px;
+                text-transform: uppercase;
+
+            }
+            #tt{
+                border-radius: 2px;
+                font-size: 4mm;
+                font-weight: 500;
+                padding: 3px;
+                width: 400px;
+                text-transform: uppercase;
+            }
+            #lb{
+                font-size: 4mm;
+                font-weight: 600;
+                width: 150px;
+                text-transform: uppercase;
+            }
+            #bil{
+                font-size: 5mm;
+                font-weight: 600;
+                height: 7px;
+                text-transform: uppercase;
+                text-align: center;
+
+            }
+            #dt{
+                font-size: 2px;
+            }
+            
+            input[type="date"]{
+                padding: 7px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                border-radius: 5px;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+                <h1 id="title">VARUN TRAVELS</h1>
+            
+            <h4 id="title">Kodad Road, Huzurnagar-508204, Suryapet(dist),Telangana State.</h4>
+        
+        <div align="right"><input type="date"value="Date"></div>
+        <br>
+        <table border="2" align="center" width="60%" height="5%">
+        <tr>
+            <td colspan="2">
+                <h3 id="bil"><u>BILL</u></h3>
+            </td>
+        </tr>
+            <tr>
+                <td><h3 id="lb">Name:</h3></td>
+                <td><input type="text"id="Name"placeholder="Enter Name"size="51"></td>
+            </tr>
+            <tr>
+                <td><h3 id="lb">From:</h3></td>
+                <td><input type="text"id="From"placeholder="From"size="51"></td>
+            </tr>
+            <tr>
+                <td><h3 id="lb">Destination:</h3></td>
+                <td><input type="text"id="Dest"placeholder="Destination"size="51"></td>
+            </tr>
+            <tr>
+                <td><h3 id="lb">Vehicle_Number:</h3></td>
+                <td><input type="text"id="veh"placeholder="Vehicle Number"size="51"></td>
+            </tr>
+        </table> 
+        <br>
+        
+        <table border="2"align="center" width="50%" height="20%">
+            <tr>
+                
+                <td><h6 id="sp">s.no</h6></td>
+                <td><h6 id="sp">Particulars</h6></td>
+                <td><h6 id="sp">Amount</h6></td>
+                
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td><input type="text"id="r1"size="40"></td>
+                <td><input type="number"id="t1"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td><input type="text"id="r2"size="40"></td>
+                <td><input type="number"id="t2"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td><input type="text"id="r3"size="40"></td>
+                <td><input type="number"id="t3"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td><input type="text"id="r4"size="40"></td>
+                <td><input type="number"id="t4"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td><input type="text"id="r5"size="40"></td>
+                <td><input type="number"id="t5"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td><input type="text"id="r6"size="40"></td>
+                <td><input type="number"id="t6"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td><input type="text"id="r7"size="40"></td>
+                <td><input type="number"id="t7"size="11"value="0"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button"id="tt"value="        TOTAL      "onclick="tot()"></td>
+                <td><input type="text"id="total"size="20"disabled="disabled"></td>
+            </tr>
+        </table>
+        <br>
+        
+        <div class="lnk">more about <strong><a href="https://g.co/kgs/6e7N9m"target="new">Varun Travels</a></strong></div>
+        <br>
+        <br>
+        <br>
+
+        <input type="button"id="prnt"value="Print"onclick="pr()"> <input type="button"id="reset"value="Reset"onclick="rst()">
+    </div>
+        <script>
+            function pr() {
+                window.print()
+            }
+            function rst() {
+                document.getElementById("Name").value=""
+                document.getElementById("From").value=""    
+                document.getElementById("Dest").value=""
+                document.getElementById("veh").value=""
+                document.getElementById("r1").value=""
+                document.getElementById("r2").value=""
+                document.getElementById("r3").value=""
+                document.getElementById("r4").value=""
+                document.getElementById("r5").value=""
+                document.getElementById("r6").value=""
+                document.getElementById("r7").value=""
+                
+                document.getElementById("t1").value="0"
+                document.getElementById("t2").value="0"
+                document.getElementById("t3").value="0"
+                document.getElementById("t4").value="0"
+                document.getElementById("t5").value="0"
+                document.getElementById("t6").value="0"
+                document.getElementById("t7").value="0"
+                document.getElementById("total").value=""
+                
+            }
+            
+            function tot() {
+
+                var te1=parseInt(document.getElementById('t1').value);
+                var te2=parseInt(document.getElementById('t2').value);
+                var te3=parseInt(document.getElementById('t3').value);
+                var te4=parseInt(document.getElementById('t4').value);
+                var te5=parseInt(document.getElementById('t5').value);
+                var te6=parseInt(document.getElementById('t6').value);
+                var te7=parseInt(document.getElementById('t7').value);
+                document.getElementById("total").value=te1+te2+te3+te4+te5+te6+te7
+                
+                
+            }
+            
+        </script>
+    </body>
+</html>
